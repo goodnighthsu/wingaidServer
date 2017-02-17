@@ -11,8 +11,7 @@ import Foundation
 extension String{
     var intValue: Int {
         get{
-            let string = self as NSString
-            return Int(string.integerValue)
+            return Int(self) ?? 0
         }
     }
 }

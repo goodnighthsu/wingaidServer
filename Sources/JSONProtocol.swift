@@ -18,7 +18,7 @@ extension Array: JSONProtocol {
     var json: Any {
         get{
             let result = self.map{ element -> Any? in
-                let obj = element as AnyObject
+                let obj = element as! AnyObject
                 if let jsonObj = obj as? JSONProtocol{
                     return jsonObj.json
                 }
