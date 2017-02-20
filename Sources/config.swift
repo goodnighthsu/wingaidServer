@@ -24,8 +24,14 @@ let logDirectory = rootDirectory + "/log"
 let logFile = logDirectory + "/serverLog.log"
 
 //MAKR: MySql
-let mySqlHost = "127.0.0.1"
+#if os(Linux)
+    let mySqlHost = "10.117.226.53"
+#else
+    let mySqlHost = "47.88.5.43"
+#endif
+
 let mySqlUserName = "root"
+
 #if os (Linux)
   let mySqlPassword = "Wxgoogle123"
 #else
